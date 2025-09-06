@@ -1,0 +1,91 @@
+/* formulario.css */
+.contact-form {
+    background: var(--branco);
+    border-radius: 15px;
+    padding: 30px;
+    margin: 40px 0;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contact-form h3 {
+    text-align: center;
+    color: var(--rosa);
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+#whatsappForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: var(--preto);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #e6e6e6;
+    border-radius: 10px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--rosa);
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(255, 77, 141, 0.2);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+#whatsappForm button {
+    align-self: center;
+    margin-top: 20px;
+    font-size: 1.1rem;
+    padding: 15px 40px;
+}
+
+/* Estilo para validação */
+.form-group input:invalid:not(:focus):not(:placeholder-shown),
+.form-group textarea:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #ff3860;
+}
+
+.form-group input:valid:not(:focus):not(:placeholder-shown),
+.form-group textarea:valid:not(:focus):not(:placeholder-shown) {
+    border-color: #23d160;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 20px;
+        margin: 30px 0;
+    }
+    
+    .contact-form h3 {
+        font-size: 1.5rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 12px;
+    }
+}

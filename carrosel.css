@@ -1,0 +1,177 @@
+/* Estilos específicos para os carrosséis */
+.flags-carousel .slick-prev,
+.flags-carousel .slick-next,
+.testimonial-carousel .slick-prev,
+.testimonial-carousel .slick-next {
+    z-index: 1;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--rosa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.flags-carousel .slick-prev:hover,
+.flags-carousel .slick-next:hover,
+.testimonial-carousel .slick-prev:hover,
+.testimonial-carousel .slick-next:hover {
+    background: var(--rosa-escuro);
+}
+
+.flags-carousel .slick-prev:before,
+.flags-carousel .slick-next:before,
+.testimonial-carousel .slick-prev:before,
+.testimonial-carousel .slick-next:before {
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    color: var(--branco);
+    font-size: 20px;
+}
+
+.flags-carousel .slick-prev:before,
+.testimonial-carousel .slick-prev:before {
+    content: '\f104';
+}
+
+.flags-carousel .slick-next:before,
+.testimonial-carousel .slick-next:before {
+    content: '\f105';
+}
+
+.flags-carousel .slick-prev,
+.testimonial-carousel .slick-prev {
+    left: -50px;
+}
+
+.flags-carousel .slick-next,
+.testimonial-carousel .slick-next {
+    right: -50px;
+}
+
+.flags-carousel .slick-dots,
+.testimonial-carousel .slick-dots {
+    bottom: -40px;
+}
+
+.flags-carousel .slick-dots li button:before,
+.testimonial-carousel .slick-dots li button:before {
+    font-size: 12px;
+    color: var(--rosa-claro);
+}
+
+.flags-carousel .slick-dots li.slick-active button:before,
+.testimonial-carousel .slick-dots li.slick-active button:before {
+    color: var(--rosa);
+}
+
+/* Responsividade para os carrosséis */
+@media (max-width: 768px) {
+    .flags-carousel .slick-prev,
+    .testimonial-carousel .slick-prev {
+        left: -20px;
+    }
+    
+    .flags-carousel .slick-next,
+    .testimonial-carousel .slick-next {
+        right: -20px;
+    }
+}
+
+
+
+
+/* carrosel.css - Adicione estas regras ao final do arquivo */
+
+/* Responsividade para os carrosséis */
+@media (max-width: 1024px) {
+    .flags-carousel .slick-prev,
+    .testimonial-carousel .slick-prev {
+        left: -40px;
+    }
+    
+    .flags-carousel .slick-next,
+    .testimonial-carousel .slick-next {
+        right: -40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .flags-carousel .slick-prev,
+    .testimonial-carousel .slick-prev {
+        left: -25px;
+    }
+    
+    .flags-carousel .slick-next,
+    .testimonial-carousel .slick-next {
+        right: -25px;
+    }
+    
+    .flags-carousel .slick-list,
+    .testimonial-carousel .slick-list {
+        margin: 0 -10px;
+    }
+    
+    .flag-item, 
+    .testimonial-item {
+        margin: 10px;
+    }
+}
+
+@media (max-width: 576px) {
+    .flags-carousel .slick-prev,
+    .testimonial-carousel .slick-prev {
+        left: -15px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .flags-carousel .slick-next,
+    .testimonial-carousel .slick-next {
+        right: -15px;
+        width: 30px;
+        height: 30px;
+    }
+    
+    .flags-carousel .slick-prev:before,
+    .flags-carousel .slick-next:before,
+    .testimonial-carousel .slick-prev:before,
+    .testimonial-carousel .slick-next:before {
+        font-size: 16px;
+    }
+    
+    .flag-item {
+        padding: 15px;
+    }
+    
+    .flag {
+        font-size: 2.5rem;
+    }
+    
+    .testimonial-item {
+        padding: 20px;
+    }
+}
+
+/* Ajuste para quando não há JavaScript (carrossel não funciona) */
+.no-js .flags-carousel,
+.no-js .testimonial-carousel {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.no-js .flag-item,
+.no-js .testimonial-item {
+    flex: 0 0 calc(50% - 20px);
+    margin: 10px;
+}
+
+@media (max-width: 768px) {
+    .no-js .flag-item,
+    .no-js .testimonial-item {
+        flex: 0 0 100%;
+    }
+}
